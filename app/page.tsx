@@ -1,32 +1,11 @@
-'use client'
-import { useState } from 'react'
+import TaskBoard from "../components/TaskBoard";
 
 export default function Home() {
-  const [tasks, setTasks] = useState([])
-  const [input, setInput] = useState('')
-
-  const addTask = () => {
-    if (input.trim() === '') return
-    setTasks([...tasks, input])
-    setInput('')
-  }
-
   return (
-    <main style={{ padding: '20px' }}>
-      <h1>Task Manager</h1>
-
-      <input
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Enter a task"
-      />
-      <button onClick={addTask}>Add</button>
-
-      <ul>
-        {tasks.map((task, index) => (
-          <li key={index}>{task}</li>
-        ))}
-      </ul>
+    <main className="min-h-screen p-6 bg-black text-white">
+      <h1 className="text-3xl font-bold mb-4">Task Manager</h1>
+      <TaskBoard />
     </main>
-  )
+  );
 }
+
