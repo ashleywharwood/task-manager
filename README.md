@@ -16,5 +16,8 @@ npm run dev
 ## AI Usage Log
 - Used ChatGPT to understand React state and useEffect
 - Used AI to structure components
-- Modified all code and added explanations
+- Modified all code and added explanations.
+
+
+
 
