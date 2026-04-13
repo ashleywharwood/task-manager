@@ -1,17 +1,13 @@
 'use client';
 import { useState } from 'react';
 
-// COMPONENT: AddTaskForm
-// PURPOSE: handles user input
 export default function AddTaskForm({ onAdd }) {
 
   const [title, setTitle] = useState("");
 
   function handleSubmit(e) {
-    e.preventDefault(); // stop page refresh
-
-    if (!title.trim()) return; // prevent empty tasks
-
+    e.preventDefault();
+    if (!title.trim()) return;
     onAdd(title);
     setTitle("");
   }
@@ -19,12 +15,12 @@ export default function AddTaskForm({ onAdd }) {
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
       <input
-        className="flex-1 p-2 rounded text-black"
+        className="flex-1 p-2 rounded-full text-black border border-pink-300"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="New task..."
+        placeholder="Add something cute ✨"
       />
-      <button className="bg-blue-500 px-3 rounded">
+      <button className="bg-pink-500 text-white px-4 rounded-full">
         Add
       </button>
     </form>
