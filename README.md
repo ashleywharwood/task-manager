@@ -22,8 +22,10 @@ update their progress in real time.
 - Tailwind CSS
 
 ## How to Run
+```bash
 npm install
 npm run dev
+```
 
 ## AI Usage
 - Used ChatGPT to better understand React concepts such as state and useEffect
